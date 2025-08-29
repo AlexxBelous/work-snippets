@@ -1,0 +1,7 @@
+//Make section span full viewport width inside a centered container.
+.section {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+}
