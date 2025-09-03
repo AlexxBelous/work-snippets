@@ -5,3 +5,36 @@
   width: 100vw;
   margin-left: calc(-50vw + 50%);
 }
+
+
+//stretches the line to the full width of the screen, ignoring containers
+
+.post-pdf {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: calc(0px - ((100vw - 100%) / 2));
+    width: 100vw;
+    height: 1px;
+    background: $dark-charcoal-color;
+  }
+}
+
+//stretches the line to the full width of the screen, ignoring containers
+.post-pdf {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100vw;
+    height: 1px;
+    background: $dark-charcoal-color;
+  }
+}
