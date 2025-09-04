@@ -9,7 +9,7 @@
 
 //stretches the line to the full width of the screen, ignoring containers
 
-.post-pdf {
+.section {
   position: relative;
 
   &::before {
@@ -24,7 +24,7 @@
 }
 
 //stretches the line to the full width of the screen, ignoring containers
-.post-pdf {
+.section {
   position: relative;
 
   &::before {
@@ -36,5 +36,23 @@
     width: 100vw;
     height: 1px;
     background: $dark-charcoal-color;
+  }
+}
+
+
+
+
+/* Styles for a container with an image, ensuring fixed height, cropped content, and rounded corners with smooth filter transitions */
+.wrapper-img {
+  height: rem-calc(290);
+  margin-bottom: rem-calc(30);
+  overflow: hidden; /* Hides content exceeding container boundaries */
+
+  img {
+    width: 100%; /* Image takes full container width */
+    height: 100%; /* Image takes full container height */
+    max-width: none; /* Removes maximum width restriction */
+    object-fit: cover;
+    display: block;
   }
 }
