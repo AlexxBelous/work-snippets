@@ -1,0 +1,59 @@
+//Make section span full viewport width inside a centered container.
+.section {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+}
+
+
+//stretches the line to the full width of the screen, ignoring containers
+
+.section {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: calc(0px - ((100vw - 100%) / 2));
+    width: 100vw;
+    height: 1px;
+    background: $dark-charcoal-color;
+  }
+}
+
+//stretches the line to the full width of the screen, ignoring containers
+.section {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100vw;
+    height: 1px;
+    background: $dark-charcoal-color;
+  }
+}
+
+
+
+
+.wrapper-img {
+  height: rem-calc(290); /* Sets container height to 290 units (in rem) */
+  margin-bottom: rem-calc(30); /* Adds 30-unit bottom margin (in rem) */
+  overflow: hidden; /* Hides content exceeding container boundaries */
+
+  img {
+    width: 100%; /* Image takes full container width */
+    height: 100%; /* Image takes full container height */
+    max-width: none; /* Removes maximum width restriction */
+    object-fit: cover; /* Fills container, cropping image if needed */
+    border-radius: rem-calc(12); /* Rounds image corners by 12 units (in rem) */
+    transition: filter 0.3s ease; /* Smooth filter effect transition in 0.3s */
+    display: block; /* Makes image a block element, removing extra spacing */
+  }
+}
