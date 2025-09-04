@@ -42,18 +42,20 @@
 
 
 
+
+/* Styles for a container with an image, ensuring fixed height, cropped content, and rounded corners with smooth filter transitions */
 .wrapper-img {
-  height: rem-calc(290); /* Sets container height to 290 units (in rem) */
-  margin-bottom: rem-calc(30); /* Adds 30-unit bottom margin (in rem) */
+  height: rem-calc(290);
+  margin-bottom: rem-calc(30);
   overflow: hidden; /* Hides content exceeding container boundaries */
 
   img {
-    width: 100%; /* Image takes full container width */
-    height: 100%; /* Image takes full container height */
+    width: 100%;
+    height: 100%;
     max-width: none; /* Removes maximum width restriction */
-    object-fit: cover; /* Fills container, cropping image if needed */
-    border-radius: rem-calc(12); /* Rounds image corners by 12 units (in rem) */
-    transition: filter 0.3s ease; /* Smooth filter effect transition in 0.3s */
-    display: block; /* Makes image a block element, removing extra spacing */
+    border-radius: rem-calc(12);
+    object-fit: cover;
+    display: block;
+
   }
 }
