@@ -88,3 +88,28 @@
     }
   }
 }
+
+
+
+
+/* This calc(3% + #{$arrow-size} + #{$arrow-gap}) rule is used to position the Next button
+ right after the Prev button.
+ The formula takes the base offset from the edge (3%), adds the button width ($arrow-size),
+ and the spacing ($arrow-gap).
+ This way, the buttons don’t overlap and always keep the same gap,
+ even if the button size changes via the variable.
+ */
+
+$arrow-size: 40px; // arrow width/height
+$arrow-gap: 8px;   // space between arrows
+
+.slick-prev {
+  left: 3%; // base offset from the edge
+}
+
+.slick-next {
+  // place right after the prev button:
+  left: calc(3% + #{$arrow-size} + #{$arrow-gap});
+}
+
+}
