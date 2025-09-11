@@ -112,4 +112,38 @@ $arrow-gap: 8px;   // space between arrows
   left: calc(3% + #{$arrow-size} + #{$arrow-gap});
 }
 
+
+
+/* Custom styling for Gravity Forms checkbox input:
+   - Removes the browser’s default appearance
+   - Applies custom size, border, and background
+   - Adds a checkmark symbol (✔) when checked
+*/
+#choice_2_15_1 {
+  appearance: none;           // remove default checkbox styling
+  -webkit-appearance: none;   // vendor prefix for Safari/Chrome
+  -moz-appearance: none;      // vendor prefix for Firefox
+
+  width: rem-calc(28);
+  height: rem-calc(28);
+  border: 1px solid $dark-charcoal-color;
+  border-radius: rem-calc(4);
+  background: $bg-secondary;
+  cursor: pointer;
+  position: relative;
+
+  &:checked {
+    background: $bg-secondary;
+  }
+
+  &:checked::after {
+    content: "✔";             // checkmark symbol inside the checkbox
+    color: $text-light;
+    font-size: rem-calc(18);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
 }
+
